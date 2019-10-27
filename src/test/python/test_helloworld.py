@@ -1,3 +1,7 @@
+import sys
+
+sys.path.append('../../main/python')
+
 import unittest
 import helloworld
 
