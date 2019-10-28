@@ -13,4 +13,6 @@ while len(lotto) < 6:
     lotto.add(random.randint(1, 50))
     
 print(lotto)
-print(f'Lottery numbers = {lotto}')
+print(f'Lottery numbers = {str(lotto):>40s}')
+
+
