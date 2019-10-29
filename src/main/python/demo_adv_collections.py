@@ -51,8 +51,13 @@ def f4():
     wee_names = list(filter(lambda n: len(n) <=5, students))
     print(f"4. Short names = {wee_names}")
 
+def f5():
+    wee_names = [name for name in students if len(name) <=5]
+    print(f"5. Short names = {wee_names}")
+
 
 f1()
 f2()
 f3()
 f4()
+f5()
