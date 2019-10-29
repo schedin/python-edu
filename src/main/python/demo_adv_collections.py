@@ -40,10 +40,19 @@ def f2():
 
 
 def f3():
-    wee_names = list(filter(lambda n: len(n) <=5, students))
+    def filter_names(name):
+        return len(name) <= 5
+        
+    wee_names = list(filter(filter_names, students))
     print(f"3. Short names = {wee_names}")
+
+
+def f4():
+    wee_names = list(filter(lambda n: len(n) <=5, students))
+    print(f"4. Short names = {wee_names}")
 
 
 f1()
 f2()
 f3()
+f4()
