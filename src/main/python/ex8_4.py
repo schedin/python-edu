@@ -10,8 +10,11 @@ def format_line(line):
     
     line = re.sub("'", "''", line)
 
-    columns = ["'" + c + "'" for c in line.split(",")]    
-    line = ",".join(columns)
+    #columns = ["'" + c + "'" for c in line.split(",")]    
+    #line = ",".join(columns)
+
+    line = ",".join(map(lambda c: "'" + c + "'", line.split(",")))
+
     
     return line
 
