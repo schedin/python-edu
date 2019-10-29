@@ -5,7 +5,9 @@
 
 import re
 
-def search_pattern(pattern, filename=r'words'):
+def search_pattern(pattern:str, filename=r'words') -> int:
+    print(f"Annotations = {search_pattern.__annotations__}")
+    
     count_lines = 0
     with open(filename) as fh:
         pattern = re.compile(pattern)
