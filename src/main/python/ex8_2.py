@@ -9,12 +9,16 @@ start_cpu_time = 0
 
 
 def start_timer():
+    '''Start the timer'''
+    
     global start_cpu_time
     times = os.times()
     start_cpu_time =  times[0] + times[1]
     
 
 def end_timer():
+    '''Stop the timer and print the result'''
+    
     global start_cpu_time
     times = os.times()
     end_cpu_time =  times[0] + times[1]
