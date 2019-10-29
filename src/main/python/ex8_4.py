@@ -3,11 +3,9 @@
 '''
 '''
 
-import os
 import re
 
-
-def format(line):
+def format_line(line):
     line = line.rstrip()
     
     line = re.sub("'", "''", line)
@@ -17,11 +15,12 @@ def format(line):
     
     return line
 
+
 def main():
     
     
     for line in open("country.txt"):
-        line = format(line)
+        line = format_line(line)
         print(line)
 
 if __name__ == "__main__":
