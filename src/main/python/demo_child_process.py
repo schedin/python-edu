@@ -15,7 +15,7 @@ from sys import stderr
 #print(p.returncode)
 
 
-p = subprocess.run("tasklist", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+p = subprocess.run("tasklist", shell=True, capture_output=True)
 
 if p.stdout:
     print(p.stdout)
