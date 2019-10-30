@@ -3,13 +3,23 @@
 '''
 '''
 
-def frange(start, stop, step=0.25):
+import decimal
+
+def frange(start, stop=None, step=0.25):
     if not step:
         return # TODO throw exception
     
-    next_ = start
+    if stop is None:
+        stop = start
+        start = 0
+    
+    
+
+    
+    next_ = decimal.Decimal(str(start))
+    step = decimal.Decimal(str(step))
     while next_ < stop:
-        yield next_
+        yield float(next_)
         next_ += step
 
 
