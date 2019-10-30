@@ -17,7 +17,7 @@ def main():
                 line = line.strip()
                 print(line)
     except FileNotFoundError as e:
-        print(f"Could not open file: {str(e)}")
+        print(f"Could not open file: {str(e)}", file=sys.stderr)
         sys.exit(1)
     
     
