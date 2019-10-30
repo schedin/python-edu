@@ -9,6 +9,13 @@ def multiply(x, z):
 
 
 def add(x, z):
+    '''
+    Add two numbers
+    >>> add(2, 3)
+    5
+    >>> add(4, 5)
+    9
+    '''
     return x + z
 
 
@@ -18,6 +25,8 @@ def divide(x, z):
 
 
 def main():
+    import doctest
+    doctest.testmod()
     print(f"3 * 4 is {multiply(3, 4)}")
     print(f"3 + 4 is {add(3, 4)}")
     print(f"4 / 3 is {divide(4, 3)}")
