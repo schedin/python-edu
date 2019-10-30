@@ -40,5 +40,7 @@ def main():
     for z in generate_numbers2():
         print(z)        
 
+    print(type((x for x in range(10))))
+
 if __name__ == "__main__":
     main()
